@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    color: inherit;
+    cursor: pointer;
+}
+
+
+
+body{
+    background-color: #011627;
+    color: #fdfffc;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+p{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+/* 
+    #2ec4b6
+    #e71d36
+    #ff9f1c
+ */
