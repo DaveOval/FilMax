@@ -6,7 +6,6 @@ import Loader from "../Loader";
 const Home = () => {
   const [images, setImages] = useState([
     { src: "./img/home/dc.webp", isLoading: true },
-    { src: "./img/home/isla.webp", isLoading: true },
     { src: "./img/home/logan.webp", isLoading: true },
     { src: "./img/home/marvel.webp", isLoading: true },
     { src: "./img/home/starwars.webp", isLoading: true },
@@ -40,17 +39,21 @@ const Home = () => {
               src={image.src}
               alt=""
               onLoad={() => handleImageLoad(index)}
-              style={{ display: image.isLoading ? "none" : "block" }}
+              /* style={{ display: image.isLoading ? "none" : "block" }} */
             />
           </React.Fragment>
         ))}
 
         <div className="images__modal">
-            <h1>AHORRA 5 MESES</h1>
-            <h2>CON EL PLAN ANUAL</h2>
-            <Link to="/sign-up">SUSCRIBETE AHORA</Link>
-            <p>*Solo aplica al plan de prepago anual</p>
+            <h1>DISFRUTA</h1>
+            <h2>TODO LO QUE QUIERAS</h2>
+            <p>*Es mentira esta pagina no funciona.</p>
         </div>
+      </section>
+
+      <section className="features">
+          <h1>EN CONTSTRUCCION</h1>
+          <img src="../../../public/working.gif" alt="" />
       </section>
     </main>
   );

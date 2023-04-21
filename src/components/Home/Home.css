@@ -6,7 +6,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.3rem 2rem;
     color: white;
     flex-wrap: wrap;
     z-index: 1000;
@@ -49,10 +49,11 @@
 }
 .images img{
     width: 0px;
+    height: 100%;
     flex-grow: 1;
     object-fit: cover;
     opacity: 0.8;
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
 }
 .images img:hover{
     width: 30vw;
@@ -62,19 +63,31 @@
     width: fit-content;
     height: fit-content;
     padding: 1rem;
-    position: fixed;
+    position: absolute;
     bottom: 10%;
-    background-color: #00000099;
+    left: 20%;
+    background-color: #000000ae;
     border-radius: 20px;
+    text-align: center;
 }
 .images__modal h1{
     font-size: 3.0rem;
     font-weight: 700;
     letter-spacing: 2.8px;
     text-transform: uppercase;
-    width: fit-content;
-    height: fit-content;
-    cursor: pointer;
     color: #2ec4b6;
-}
     
+}
+.features{
+    background-image: url(../../../public/video/home.mp4);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
