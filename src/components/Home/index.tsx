@@ -8,7 +8,7 @@ const Home = () => {
     { src: "./img/home/dc.webp", isLoading: true },
     { src: "./img/home/logan.webp", isLoading: true },
     { src: "./img/home/marvel.webp", isLoading: true },
-    { src: "./img/home/starwars.webp", isLoading: true },
+    /* { src: "./img/home/starwars.webp", isLoading: true }, */
     { src: "./img/home/spiderman2.webp", isLoading: true },
     { src: "./img/home/titanic.webp", isLoading: true },
   ]);
