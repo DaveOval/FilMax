@@ -51,7 +51,7 @@ const Home = () => {
       </section>
 
       <section className="features">
-        <video src="../../../public/video/home.mp4" autoPlay muted loop></video>
+        <video src="./public/video/home.mp4" autoPlay muted loop></video>
         <div className="features__container">
           <h2>La mejor experiencia de cine</h2>
           <ol>
