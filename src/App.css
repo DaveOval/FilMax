@@ -38,6 +38,27 @@ p{
     font-weight: 400;
     margin-bottom: 1rem;
 }
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #2ec4b6 #011627;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #011627;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #2ec4b6;
+    border-radius: 0px;
+    border: 0px solid #ffffff;
+  }
 
 /* 
     #2ec4b6

@@ -8,15 +8,14 @@ const Home = () => {
     { src: "./img/home/dc.webp", isLoading: true },
     { src: "./img/home/logan.webp", isLoading: true },
     { src: "./img/home/marvel.webp", isLoading: true },
-    /* { src: "./img/home/starwars.webp", isLoading: true }, */
     { src: "./img/home/spiderman2.webp", isLoading: true },
     { src: "./img/home/titanic.webp", isLoading: true },
   ]);
-    const handleImageLoad = (index:number) => {
-        const newImages = [...images];
-        newImages[index].isLoading = false;
-        setImages(newImages);
-    };
+  const handleImageLoad = (index: number) => {
+    const newImages = [...images];
+    newImages[index].isLoading = false;
+    setImages(newImages);
+  };
   return (
     <main>
       <nav className="navbar-home">
@@ -45,16 +44,35 @@ const Home = () => {
         ))}
 
         <div className="images__modal">
-            <h1>DISFRUTA</h1>
-            <h2>TODO LO QUE QUIERAS</h2>
-            <p>*Es mentira esta pagina no funciona.</p>
+          <h1>DISFRUTA</h1>
+          <h2>TODO LO QUE QUIERAS</h2>
+          <p>*Es mentira esta pagina no funciona.</p>
         </div>
       </section>
 
       <section className="features">
-          <h1>EN CONTSTRUCCION</h1>
-          <img src="../../../public/working.gif" alt="" />
+        <video src="../../../public/video/hero.mp4" autoPlay muted loop></video>
+
+        <div className="features__container">
+          <h2>La mejor experiencia de cine</h2>
+          <ol>
+            <li>Contenido 8k.</li>
+            <li>HDR10+.</li>
+            <li>Dolby atmos.</li>
+            <li>Dolby Vision.</li>
+            <li>Formato IMAX.</li>
+          </ol>
+        </div>
       </section>
+
+    <section className="videos-series">
+      <div>
+        <h2>Trailer</h2>
+        <p>Todas las mejores peliculas y series en un mismo lugar.</p>
+      </div>
+      
+    </section>
+  
     </main>
   );
 };
