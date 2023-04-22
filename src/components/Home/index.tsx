@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Loader from "../Loader";
+import YouTube from 'react-youtube';
 
 const Home = () => {
   const [images, setImages] = useState([
@@ -16,6 +17,7 @@ const Home = () => {
     newImages[index].isLoading = false;
     setImages(newImages);
   };
+  const videoId = "8YQM6VlfiqM"
   return (
     <main>
       <nav className="navbar-home">
@@ -65,11 +67,13 @@ const Home = () => {
       </section>
 
     <section className="videos-series">
-      <div>
-        <h2>Trailer</h2>
-        <p>Todas las mejores peliculas y series en un mismo lugar.</p>
+      <div className="videos-series-text">
+        <h2>Las peliculas y series mas nuevas</h2>
+        <p>Las mejores peliculas y series.</p>
       </div>
-      
+      <div className="video-container">
+        <YouTube videoId={videoId} className="video-player" />
+      </div>
     </section>
   
     </main>
