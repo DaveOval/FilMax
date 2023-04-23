@@ -7,7 +7,7 @@ import YouTube from "react-youtube";
 import Carousel from "react-bootstrap/Carousel";
 import Accordion from "react-bootstrap/Accordion";
 
-const Home = () => {
+const  Home = () => {
   const [images, setImages] = useState([
     { src: "./img/home/dc.webp", isLoading: true },
     { src: "./img/home/logan.webp", isLoading: true },
