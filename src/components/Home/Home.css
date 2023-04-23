@@ -41,6 +41,7 @@
 }
 .navbar-home__link:hover {
   text-decoration: underline #2ec4b6 4px;
+  color: aqua;
 }
 .images {
   display: flex;
@@ -144,6 +145,100 @@
   height: auto;
   object-fit: cover;
 }
+.catalogo{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.catalogo-title{
+  width: 100%;
+  height: fit-content;
+  margin: 4rem auto;
+  overflow: hidden;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #2ec4b6;
+}
+.catalogo-btn{
+  margin: 4rem auto;
+  overflow: hidden;
+  text-align: center;
+  background-color: #2ec4b6;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 2rem auto;
+}
+.catalogo-btn:hover{
+  background-color: #43d4c5;
+  cursor: pointer;
+}
+/* .info{
+  margin: 4rem auto !important;
+  overflow: hidden !important;
+  text-align: center !important;
+  color: azure !important;
+}
+.info-accordion{
+  background-color: #011627 !important;
+  color: white !important;
+}
+div.info-accordion .info-accordion-body{
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 2.8px !important;
+  text-transform: uppercase !important;
+  color: #2ec4b6 !important;
+  background-color: #011627 !important;
+}
+.info-accordion.body{
+  background-color: #011627;
+} */
+.accordion-button {
+  background-color: #011627;
+  color: #2ec4b6;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  border: #2ec4b6 1px solid;
+}
+.accordion-button:hover{
+  background-color: #2ec4b6;
+  color: #011627;
+  border: #011627 1px solid;
+}
+.accordion-button:active{
+  background-color: #2ec4b6;
+  color: #011627;
+  border: #011627 1px solid;
+}
+.accordion-button {
+  background-color: #011627;
+  color: #2ec4b6;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+.accordion-collapse {
+  background-color: #011627;
+  color: #2ec4b6;
+  padding: 1rem;
+}
+.accordion-body {
+  padding: 0;
+}
+
 
 @media (min-width: 860px) {
   .images__modal {
