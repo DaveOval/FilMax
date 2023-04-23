@@ -182,27 +182,6 @@
   background-color: #43d4c5;
   cursor: pointer;
 }
-/* .info{
-  margin: 4rem auto !important;
-  overflow: hidden !important;
-  text-align: center !important;
-  color: azure !important;
-}
-.info-accordion{
-  background-color: #011627 !important;
-  color: white !important;
-}
-div.info-accordion .info-accordion-body{
-  font-size: 1.5rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 2.8px !important;
-  text-transform: uppercase !important;
-  color: #2ec4b6 !important;
-  background-color: #011627 !important;
-}
-.info-accordion.body{
-  background-color: #011627;
-} */
 .accordion-button {
   background-color: #011627;
   color: #2ec4b6;
@@ -238,7 +217,9 @@ div.info-accordion .info-accordion-body{
 .accordion-body {
   padding: 0;
 }
-
+.accordion-button::before{
+  color: #43d4c5;
+}
 
 @media (min-width: 860px) {
   .images__modal {

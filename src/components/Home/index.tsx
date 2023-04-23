@@ -7,7 +7,7 @@ import YouTube from "react-youtube";
 import Carousel from "react-bootstrap/Carousel";
 import Accordion from "react-bootstrap/Accordion";
 
-const  Home = () => {
+const Home = () => {
   const [images, setImages] = useState([
     { src: "./img/home/dc.webp", isLoading: true },
     { src: "./img/home/logan.webp", isLoading: true },
@@ -27,18 +27,16 @@ const  Home = () => {
   const acordion = {
     color: "white",
     backgroundColor: "black",
-  }
+  };
   return (
     <main>
       <nav className="navbar-home">
         <h2 className="navbar-home__logo">FilMax</h2>
         <ul className="navbar-home__links">
-          <Link to="/sign-in">
-            <li className="navbar-home__link">Ingresar</li>
+          <Link to="/main">
+            <li className="navbar-home__link">Continuar</li>
           </Link>
-          <Link to="/sign-up">
-            <li className="navbar-home__link">Suscribete ahora</li>
-          </Link>
+
         </ul>
       </nav>
 
@@ -134,31 +132,38 @@ const  Home = () => {
           </Carousel.Item>
         </Carousel>
 
-        <Link to="/catalogo" className="catalogo-btn">
+        <Link to="/main" className="catalogo-btn">
           Ver mas
         </Link>
       </div>
 
       <div className="container mt-5 mb-5 info">
         <Accordion>
-          <Accordion.Item eventKey="0" >
-            <Accordion.Header >¿Ques FilMax?</Accordion.Header>
-            <Accordion.Body >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere delectus animi illo suscipit similique optio perspiciatis alias adipisci consectetur quas quibusdam, architecto corporis vel neque tenetur deleniti consequatur obcaecati?
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>¿Ques FilMax?</Accordion.Header>
+            <Accordion.Body>
+              FilMax es una plataforma de streaming en línea que te permite
+              acceder a una gran variedad de películas y series de televisión.
+              ¡No hay necesidad de salir de casa para encontrar la diversión que
+              buscas! Con FilMax, puedes disfrutar de una amplia selección de
+              contenidos en cualquier momento y lugar. Además, su interfaz es
+              fácil de usar y su calidad de video es excepcional, lo que te
+              brinda una experiencia de visualización sin igual. Con FilMax,
+              nunca te faltarán opciones para disfrutar en tu tiempo libre.
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="1" >
-            <Accordion.Header >
-              ¿FilMax tierne una prueba gratis?
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>
+              ¿FilMax tiene una prueba gratis?
             </Accordion.Header>
             <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do   
+              Claro, todo el contendio es gratis y puedes disfrutarlo cuando tu quieras.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="2">
             <Accordion.Header>¿Cual es el precio de FilMax?</Accordion.Header>
             <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do     
+              Es totalmente ya que tu eres el produco en esta plataforma.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">
@@ -166,15 +171,7 @@ const  Home = () => {
               ¿QUe series y peliculas puedo ver en FilMax?
             </Accordion.Header>
             <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do    
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="4">
-            <Accordion.Header>
-              ¿QUe series y peliculas puedo ver en FilMax?
-            </Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              Todas las peliculas creadas por la humanidad.
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>

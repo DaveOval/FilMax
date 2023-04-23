@@ -56,7 +56,9 @@
     margin-bottom: 1rem;
     letter-spacing: 2px;
 }
-
+.footer__legal a:hover{
+    color: aqua;
+}
 @media (min-width: 860px) {
     .footer{
         flex-direction: row;
