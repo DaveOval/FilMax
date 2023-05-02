@@ -22,8 +22,6 @@ const Home = () => {
     });
   };
 
-  const videoId = "8YQM6VlfiqM";
-
   useEffect(() => {
     const loadImage = (image: any , index: any ) => {
       const img = new Image();
@@ -44,7 +42,7 @@ const Home = () => {
         <h2 className="navbar-home__logo">FilMax</h2>
         <ul className="navbar-home__links">
           <Link to="/browser">
-            <li className="navbar-home__link">Continuar</li>
+            <li className="navbar-home__link">See more</li>
           </Link>
         </ul>
       </nav>
@@ -63,22 +61,22 @@ const Home = () => {
         ))}
 
         <div className="images__modal">
-          <h1>DISFRUTA</h1>
-          <h2>TODO LO QUE QUIERAS</h2>
-          <p>*Es mentira esta pagina no funciona.</p>
+          <h1>ENJOY</h1>
+          <h2>all you want</h2>
+          <p>*It's a lie this page doesn't work.</p>
         </div>
       </section>
 
       <section className="features">
         <video src="./video/home.mp4" autoPlay muted loop></video>
         <div className="features__container">
-          <h2>La mejor experiencia de cine</h2>
+          <h2>The best cinema experience</h2>
           <ol>
-            <li>Contenido 8k.</li>
+            <li>8K content.</li>
             <li>HDR10+.</li>
             <li>Dolby atmos.</li>
             <li>Dolby Vision.</li>
-            <li>Formato IMAX.</li>
+            <li>IMAX.</li>
           </ol>
         </div>
       </section>
@@ -86,7 +84,7 @@ const Home = () => {
      
 
       <div className="catalogo container mt-5 mb-5">
-        <h2 className="catalogo-title">Catalogo</h2>
+        <h2 className="catalogo-title">Catalogue</h2>
         <Carousel>
           <Carousel.Item>
             <img
@@ -134,45 +132,45 @@ const Home = () => {
         </Carousel>
 
         <Link to="/browser" className="catalogo-btn">
-          Ver mas
+          See more
         </Link>
       </div>
 
       <div className="container mt-5 mb-5 info">
         <Accordion>
           <Accordion.Item eventKey="0">
-            <Accordion.Header>¿Qué es FilMax?</Accordion.Header>
+            <Accordion.Header>What is FilMax?</Accordion.Header>
             <Accordion.Body>
-              FilMax es una plataforma de streaming en línea que te permite
-              acceder a una gran variedad de películas y series de televisión.
-              ¡No hay necesidad de salir de casa para encontrar la diversión que
-              buscas! Con FilMax, puedes disfrutar de una amplia selección de
-              contenidos en cualquier momento y lugar. Además, su interfaz es
-              fácil de usar y su calidad de video es excepcional, lo que te
-              brinda una experiencia de visualización sin igual. Con FilMax,
-              nunca te faltarán opciones para disfrutar en tu tiempo libre.
+              FilMax is an online streaming platform that allows you to
+              Access a wide variety of movies and TV series.
+              There's no need to leave home to find the fun you
+              you seek! With FilMax, you can enjoy a wide selection of
+              content at any time and place. Also, its interface is
+              easy to use and its video quality is exceptional, which
+              provides an unparalleled viewing experience. With FileMax,
+              You will never run out of options to enjoy in your free time.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
             <Accordion.Header>
-              ¿FilMax tiene una prueba gratis?
+              Does FilMax have a free trial?
             </Accordion.Header>
             <Accordion.Body>
-              Claro, todo el contenido es gratis y puedes disfrutarlo cuando tú quieras.
+              Sure, all the content is free and you can enjoy it whenever you want.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="2">
-            <Accordion.Header>¿Cuál es el precio de FilMax?</Accordion.Header>
+            <Accordion.Header>What is the price of FilMax?</Accordion.Header>
             <Accordion.Body>
-              Es totalmente gratuito, ya que tú eres el producto en esta plataforma.
+              It is completely free, since you are the product on this platform.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">
             <Accordion.Header>
-              ¿Qué series y películas puedo ver en FilMax?
+              What series and movies can I watch on FilMax?
             </Accordion.Header>
             <Accordion.Body>
-              Todas las películas creadas por la humanidad.
+              All the movies created by humanity.
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>

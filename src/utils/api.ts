@@ -34,7 +34,7 @@ export const getOneMovie = async () =>{
     }catch(error){
         console.log('Error al obtener pelicula o serie aletoria', error)
 
-    }
+    };
 };
 
 export const getPopularSeries = async () =>{
@@ -44,10 +44,24 @@ export const getPopularSeries = async () =>{
                 api_key: API_KEY
             }
         });
+        return response.data.results;
+    }catch (error){
+        console.error("Error al obtener series: ", error);
+        return [];
+    };
+};
+
+export const getComingSoon = async () =>{
+    try{
+        const response = await axios.get(`${BASE_URL}/movie/upcoming`,{
+            params: {
+                api_key: API_KEY
+            }
+        });
         console.log(response.data.results);
         return response.data.results;
     }catch (error){
         console.error("Error al obtener series: ", error);
         return [];
-    }
+    };
 };

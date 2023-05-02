@@ -15,15 +15,15 @@ const Footer = () => {
                 
             </div>
             <div className='footer__credits'>
-                <p>2023 creado por David Vazquez.</p>
+                <p>2023 Created by David Vazquez.</p>
                 <p>Alura Latam.</p>
             </div>
             <div className='footer__legal'>
                 <ul>
-                    <li><a href='#'>Privacidad</a></li>
-                    <li><a href='#'>Terminos</a></li>
-                    <li><a href='#'>Ayuda</a></li>
-                    <li><a href='#'>Dispositivos</a></li>
+                    <li><a href='#'>Privacy</a></li>
+                    <li><a href='#'>Terms</a></li>
+                    <li><a href='#'>Help</a></li>
+                    <li><a href='#'>Devices</a></li>
                 </ul>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NavbarBootstrap from "../../components/Navbar";
-import { getPopularMovies, getPopularSeries } from '../../utils/api';
+import { getComingSoon, getPopularMovies, getPopularSeries } from '../../utils/api';
 import MovieCard from "../../components/MovieCard";
 import "./Browse.css";
 import PeliculaAleatoria from "../../components/PeliculaAleatoria";
@@ -22,6 +22,8 @@ const Main = () => {
 
   const [series, setSeries] = useState<Movie[]>([]);
 
+  const [comingSoon, setCommingSoon] = useState<Movie[]>([]);
+
   useEffect(() => {
     const fetchData = async () => {
       const popularMovies = await getPopularMovies();
@@ -34,6 +36,14 @@ const Main = () => {
     const fetchData = async () => {
       const popularSeries = await getPopularSeries();
       setSeries(popularSeries);
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const comingSoon = await getComingSoon();
+      setCommingSoon(comingSoon);
     };
     fetchData();
   }, []);
@@ -83,7 +93,23 @@ const Main = () => {
             ))}
           </div>
         </div>
-  
+
+        <div className="coming-soon">
+          <h1 className="coming-soon__title">Coming Soon</h1>
+          <div className="soon">
+            {comingSoon.map((soon) => (
+              <MovieCard
+                key={soon.id}
+                title={soon.title}
+                date={soon.release_date}
+                votes={soon.vote_average}
+                lang={soon.original_language}
+                id={soon.id}
+                imageUrl={`https://image.tmdb.org/t/p/original${soon.poster_path}`}
+              />
+            ))}
+          </div>
+        </div>
 
       </main>
     </>
