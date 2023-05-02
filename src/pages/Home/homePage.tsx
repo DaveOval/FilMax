@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Loader from "../../components/Loader";
 import YouTube from "react-youtube";
-
 import Carousel from "react-bootstrap/Carousel";
 import Accordion from "react-bootstrap/Accordion";
 
@@ -12,28 +11,41 @@ const Home = () => {
     { src: "https://images5.alphacoders.com/721/721135.jpg", isLoading: true },
     { src: "https://images.alphacoders.com/793/793242.jpg", isLoading: true },
     { src: "https://images4.alphacoders.com/909/909185.jpg", isLoading: true },
-    { src: "https://images5.alphacoders.com/114/1142280.jpg", isLoading: true },
     { src: "https://images2.alphacoders.com/869/869847.jpg", isLoading: true },
-    { src: "https://images4.alphacoders.com/653/653613.jpg", isLoading: true },
   ]);
 
-  const handleImageLoad = (index: number) => {
-    const newImages = [...images];
-    newImages[index].isLoading = false;
-    setImages(newImages);
+  const handleImageLoad = (index: any ): void => {
+    setImages((prevImages) => {
+      const newImages = [...prevImages];
+      newImages[index] = { ...newImages[index], isLoading: false };
+      return newImages;
+    });
   };
+
   const videoId = "8YQM6VlfiqM";
 
-  
+  useEffect(() => {
+    const loadImage = (image: any , index: any ) => {
+      const img = new Image();
+      img.src = image.src;
+      img.onload = () => handleImageLoad(index);
+    };
+
+    images.forEach((image, index) => {
+      if (image.isLoading) {
+        loadImage(image, index);
+      }
+    });
+  }, [images]);
+
   return (
     <main>
       <nav className="navbar-home">
         <h2 className="navbar-home__logo">FilMax</h2>
         <ul className="navbar-home__links">
-          <Link to="/main">
+          <Link to="/browser">
             <li className="navbar-home__link">Continuar</li>
           </Link>
-
         </ul>
       </nav>
 
@@ -45,7 +57,7 @@ const Home = () => {
               src={image.src}
               alt=""
               onLoad={() => handleImageLoad(index)}
-              /* style={{ display: image.isLoading ? "none" : "block" }} */
+              style={{ display: image.isLoading ? "none" : "block" }}
             />
           </React.Fragment>
         ))}
@@ -71,23 +83,15 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="videos-series">
-        <div className="videos-series-text">
-          <h2>Las peliculas y series mas nuevas</h2>
-          <p>Las mejores peliculas y series.</p>
-        </div>
-        <div className="video-container">
-          <YouTube videoId={videoId} className="video-player" />
-        </div>
-      </section>
+     
 
-      <div className="catalogo container mt-5 mb-5 ">
+      <div className="catalogo container mt-5 mb-5">
         <h2 className="catalogo-title">Catalogo</h2>
         <Carousel>
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="./img/home/breaking-bad.webp"
+              src="https://images7.alphacoders.com/617/617964.jpg"
               alt="First slide"
             />
             <Carousel.Caption>
@@ -98,7 +102,7 @@ const Home = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="./img/home/mandalorian.webp"
+              src="https://images8.alphacoders.com/130/1307233.png"
               alt="Second slide"
             />
             <Carousel.Caption>
@@ -109,7 +113,7 @@ const Home = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="./img/home/sopranos.webp"
+              src="https://images6.alphacoders.com/374/374919.jpg"
               alt="Third slide"
             />
             <Carousel.Caption>
@@ -120,7 +124,7 @@ const Home = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="./img/home/rick-and-morty.webp"
+              src="https://images6.alphacoders.com/633/633294.png"
               alt="Third slide"
             />
             <Carousel.Caption>
@@ -129,7 +133,7 @@ const Home = () => {
           </Carousel.Item>
         </Carousel>
 
-        <Link to="/main" className="catalogo-btn">
+        <Link to="/browser" className="catalogo-btn">
           Ver mas
         </Link>
       </div>
@@ -137,7 +141,7 @@ const Home = () => {
       <div className="container mt-5 mb-5 info">
         <Accordion>
           <Accordion.Item eventKey="0">
-            <Accordion.Header>¿Ques FilMax?</Accordion.Header>
+            <Accordion.Header>¿Qué es FilMax?</Accordion.Header>
             <Accordion.Body>
               FilMax es una plataforma de streaming en línea que te permite
               acceder a una gran variedad de películas y series de televisión.
@@ -154,21 +158,21 @@ const Home = () => {
               ¿FilMax tiene una prueba gratis?
             </Accordion.Header>
             <Accordion.Body>
-              Claro, todo el contendio es gratis y puedes disfrutarlo cuando tu quieras.
+              Claro, todo el contenido es gratis y puedes disfrutarlo cuando tú quieras.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="2">
-            <Accordion.Header>¿Cual es el precio de FilMax?</Accordion.Header>
+            <Accordion.Header>¿Cuál es el precio de FilMax?</Accordion.Header>
             <Accordion.Body>
-              Es totalmente ya que tu eres el produco en esta plataforma.
+              Es totalmente gratuito, ya que tú eres el producto en esta plataforma.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">
             <Accordion.Header>
-              ¿QUe series y peliculas puedo ver en FilMax?
+              ¿Qué series y películas puedo ver en FilMax?
             </Accordion.Header>
             <Accordion.Body>
-              Todas las peliculas creadas por la humanidad.
+              Todas las películas creadas por la humanidad.
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
@@ -178,3 +182,5 @@ const Home = () => {
 };
 
 export default Home;
+``
+
