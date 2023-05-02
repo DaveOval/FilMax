@@ -11,7 +11,7 @@ import "./Navbar.css";
 
 const NavbarBootstrap = () => {
   return (
-    <Navbar bg="custom-gb" fixed="top">
+    <Navbar bg="custom-gb" fixed="top" expand="sm">
       <Container fluid>
         <Navbar.Brand as={Link} to="/main">
           FilMax

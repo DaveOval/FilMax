@@ -9,6 +9,7 @@ interface MovieCardProps {
     imageUrl: string;
     votes: number;
     lang: string;
+    id: number;
 }
 const languages : any= {
     en: <Flag country="US" className='flag'/>,
@@ -36,21 +37,31 @@ const languages : any= {
     da: <Flag country="DK" className='flag'/>,
     ta: <Flag country="LK" className='flag'/>,
   };
+const raking : number | string | any = {
+    1: "red",
+    2: "red",
+    3: "red",
+    4: "orange",
+    5: "orange",
+    6: "yellow",
+    7: "yellow",
+    8: "green",
+    9: "green",
+    10: "green",
+}
 
-const MovieCard: React.FC<MovieCardProps> = ({ title, date, imageUrl, votes, lang }) =>{
-
+const MovieCard: React.FC<MovieCardProps> = ({ title, date, imageUrl, votes, lang , id}) =>{
+    const roudedVotes = Math.round(votes)
     return (
         <div className="movieCard">
             <img className='movieCard__img' src={imageUrl} alt={title} />
             <h3 className='movieCard__title'>{title}</h3>
             <p className='movieCard__date'>{date}</p>
-            <p className='movieCard__vote'>vote avg: {votes}</p>
+            <p className='movieCard__vote' style={{ backgroundColor: raking[roudedVotes] }}>{votes}</p>
             <p className='movieCard__flag'>{ languages[lang] }</p>
-            <Link to="/error" className='link'>Ver mas</Link>
+            <Link to={`/movie/${id}`} className='link'>Ver mas</Link>
         </div>
-
     )
-
 }
 
 export default MovieCard
