@@ -7,9 +7,11 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 import { Link } from "react-router-dom";
 
+import "./Navbar.css";
+
 const NavbarBootstrap = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="custom-gb" fixed="top">
       <Container fluid>
         <Navbar.Brand as={Link} to="/main">
           FilMax
@@ -21,27 +23,32 @@ const NavbarBootstrap = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link as={Link} to="/main">
-              Home
-            </Nav.Link>
-            <Nav.Link as={Link} to="/main">
-              Movies
-            </Nav.Link>
-            <Nav.Link as={Link} to="/main">
-              Series
-            </Nav.Link>
-            <NavDropdown title="More" id="navbarScrollingDropdown">
-              <NavDropdown.Item as={Link} to="/main">
-                Action
+            <NavDropdown title="Movies" id="navbarScrollingDropdown" >
+              <NavDropdown.Item as={Link} to="/main" >
+                Popular
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/main">
-                Another action
+                En carteleras hoy
               </NavDropdown.Item>
-              <NavDropdown.Divider />
               <NavDropdown.Item as={Link} to="/main">
-                Something else here
+                Proximamente
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/main">
+                Mejor Valoradas
               </NavDropdown.Item>
             </NavDropdown>
+            <NavDropdown title="Series" id="navbarScrollingDropdown">
+              <NavDropdown.Item as={Link} to="/main">
+                Popular
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/main">
+                Se emiten hoy
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/main">
+                Mejor valoradas
+              </NavDropdown.Item>
+            </NavDropdown>
+
           </Nav>
           <Form className="d-flex">
             <Form.Control

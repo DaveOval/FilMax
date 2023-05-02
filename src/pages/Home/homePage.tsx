@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import Loader from "../Loader";
+import Loader from "../../components/Loader";
 import YouTube from "react-youtube";
 
 import Carousel from "react-bootstrap/Carousel";
@@ -9,12 +9,12 @@ import Accordion from "react-bootstrap/Accordion";
 
 const Home = () => {
   const [images, setImages] = useState([
-    { src: "./img/home/dc.webp", isLoading: true },
-    { src: "./img/home/logan.webp", isLoading: true },
-    { src: "./img/home/marvel.webp", isLoading: true },
-    { src: "./img/home/spiderman2.webp", isLoading: true },
-    { src: "./img/home/titanic.webp", isLoading: true },
-    { src: "./img/home/starwars.webp", isLoading: true },
+    { src: "https://images5.alphacoders.com/721/721135.jpg", isLoading: true },
+    { src: "https://images.alphacoders.com/793/793242.jpg", isLoading: true },
+    { src: "https://images4.alphacoders.com/909/909185.jpg", isLoading: true },
+    { src: "https://images5.alphacoders.com/114/1142280.jpg", isLoading: true },
+    { src: "https://images2.alphacoders.com/869/869847.jpg", isLoading: true },
+    { src: "https://images4.alphacoders.com/653/653613.jpg", isLoading: true },
   ]);
 
   const handleImageLoad = (index: number) => {
@@ -24,10 +24,7 @@ const Home = () => {
   };
   const videoId = "8YQM6VlfiqM";
 
-  const acordion = {
-    color: "white",
-    backgroundColor: "black",
-  };
+  
   return (
     <main>
       <nav className="navbar-home">

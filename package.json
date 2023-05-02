@@ -1,7 +1,7 @@
 {
   "name": "filmmax",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,14 +9,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@mui/material": "^5.12.2",
+    "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
+    "react-flagkit": "^2.0.4",
     "react-icons": "^4.8.0",
     "react-router": "^6.10.0",
     "react-router-dom": "^6.10.0",
-    "react-youtube": "^10.1.0"
+    "react-youtube": "^10.1.0",
+    "styled-components": "^5.3.10"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
