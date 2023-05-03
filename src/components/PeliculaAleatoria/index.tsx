@@ -1,4 +1,4 @@
-import { getOneMovie } from "../../utils/api";
+
 import "./PeliculaAleatoria.css";
 import React, { useEffect, useState } from "react";
 
@@ -12,7 +12,7 @@ interface Pelicula {
 }
 
 const PeliculaAleatoria = () => {
-  const [pelicula, setPelicula] = useState<Pelicula[]>([]);
+  /* const [pelicula, setPelicula] = useState<Pelicula[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,11 +21,11 @@ const PeliculaAleatoria = () => {
       console.log(peliculaAleatoria);
     };
     fetchData();
-  }, []);
+  }, []); */
 
   return (
     <div className="pelicula__aleatoria">
-      {/* <div className="pelicula__aleatoria-properties">
+      {/* {<div className="pelicula__aleatoria-properties">
         <h1 className="pelicula__aleatoria-title">{pelicula.title}</h1>
         <h2 className="pelicula__aleatoria-subtitle">
           {pelicula.release_date}
@@ -42,7 +42,7 @@ const PeliculaAleatoria = () => {
         className="pelicula__aleatoria-img"
         src={`https://image.tmdb.org/t/p/original${pelicula.poster_path}`}
         alt=""
-      /> */}
+      />} */}
     </div>
   );
 };

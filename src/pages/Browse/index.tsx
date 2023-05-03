@@ -3,8 +3,6 @@ import NavbarBootstrap from "../../components/Navbar";
 import { getComingSoon, getPopularMovies, getPopularSeries } from '../../utils/api';
 import MovieCard from "../../components/MovieCard";
 import "./Browse.css";
-import PeliculaAleatoria from "../../components/PeliculaAleatoria";
-
 
 interface Movie {
     id: number;
@@ -15,7 +13,7 @@ interface Movie {
     poster_path: string;
     name: string;
     first_air_date: string;
-  }
+}
 
 const Main = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -73,6 +71,7 @@ const Main = () => {
                 lang={movie.original_language}
                 id={movie.id}
                 imageUrl={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+                type="movie"
               />
             ))}
           </div>
@@ -89,6 +88,7 @@ const Main = () => {
                 lang={serie.original_language}
                 id={serie.id}
                 imageUrl={`https://image.tmdb.org/t/p/original${serie.poster_path}`}
+                type="tv"
               />
             ))}
           </div>
@@ -106,11 +106,11 @@ const Main = () => {
                 lang={soon.original_language}
                 id={soon.id}
                 imageUrl={`https://image.tmdb.org/t/p/original${soon.poster_path}`}
+                type={"movie"}
               />
             ))}
           </div>
         </div>
-
       </main>
     </>
   );

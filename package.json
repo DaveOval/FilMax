@@ -1,7 +1,7 @@
 {
-  "name": "filmmax",
+  "name": "filmax",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "homepage": "https://daveoval.github.io/FilMax/",
   "scripts": {
@@ -21,7 +21,7 @@
     "react-flagkit": "^2.0.4",
     "react-icons": "^4.8.0",
     "react-router": "^6.10.0",
-    "react-router-dom": "^6.10.0",
+    "react-router-dom": "^6.11.0",
     "react-youtube": "^10.1.0",
     "styled-components": "^5.3.10"
   },

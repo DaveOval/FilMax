@@ -45,14 +45,10 @@
 }
 .movieCard__flag{
     position: absolute;
-    top: 374px;
+    top: 348px;
     right: 0;
 }
-.flag{
-    width: 30px;
-    height: 30px;
-    position: relative;
-}
+
 .movieCard__vote{
     position: absolute;
     color: white;

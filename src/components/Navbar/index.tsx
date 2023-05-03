@@ -8,10 +8,11 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 
 import "./Navbar.css";
+import zIndex from "@mui/material/styles/zIndex";
 
 const NavbarBootstrap = () => {
   return (
-    <Navbar bg="custom-gb" fixed="top" expand="sm">
+    <Navbar bg="custom-gb" fixed="top" expand="sm" style={{ zIndex: "100" }}>
       <Container fluid>
         <Navbar.Brand as={Link} to="/main">
           FilMax

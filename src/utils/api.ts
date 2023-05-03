@@ -17,26 +17,8 @@ export const getPopularMovies = async () => {
         console.error("Error al obtener peliculas: ", error);
         return [];
     }
-
 };
-
-export const getOneMovie = async () =>{
-    try {
-        const response = await axios.get(`${BASE_URL}/discover/movie`,{
-            params: {
-                api_key: API_KEY
-            }
-        });
-        const peliculas = response.data.results;
-        const inidiceAleatorio = Math.floor(Math.random() * peliculas.length);
-        const peliculaAleatoria = peliculas[inidiceAleatorio];
-        return peliculaAleatoria
-    }catch(error){
-        console.log('Error al obtener pelicula o serie aletoria', error)
-
-    };
-};
-
+ 
 export const getPopularSeries = async () =>{
     try{
         const response = await axios.get(`${BASE_URL}/tv/popular`,{
@@ -58,10 +40,26 @@ export const getComingSoon = async () =>{
                 api_key: API_KEY
             }
         });
-        console.log(response.data.results);
         return response.data.results;
     }catch (error){
         console.error("Error al obtener series: ", error);
         return [];
     };
 };
+
+export const getMovieById = async (id: string, type: string) =>{
+    try{
+        const response = await axios.get(`${BASE_URL}/${type}/${id}`,{
+            params: {
+                api_key: API_KEY,
+                append_to_response: "credits, videos, images, similar, recommendations, keywords"
+
+            }
+        });
+        console.log(response.data);
+        return response.data;
+    }catch (error){
+        console.error("Error al obtener series: ", error);
+        return [];
+    };
+}

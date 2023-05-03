@@ -19,7 +19,7 @@
 .popular-movies__title{
     font-size: 2rem;
     font-weight: bold;
-    z-index: 10000;
+    z-index: 1;
     align-self: flex-start;
     position: sticky;
     top: 10vh;
@@ -93,7 +93,7 @@
 .popular-series__title{
     font-size: 2rem;
     font-weight: bold;
-    z-index: 10000;
+    z-index: 1;
     align-self: flex-start;
     position: sticky;
     top: 10vh;
@@ -129,7 +129,7 @@
 .coming-soon__title{
     font-size: 2rem;
     font-weight: bold;
-    z-index: 10000;
+    z-index: 1;
     align-self: flex-start;
     position: sticky;
     top: 10vh;
