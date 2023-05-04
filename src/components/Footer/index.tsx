@@ -2,6 +2,7 @@ import { GrInstagram,  GrLinkedin, GrGithub} from 'react-icons/gr';
 
 
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -20,10 +21,10 @@ const Footer = () => {
             </div>
             <div className='footer__legal'>
                 <ul>
-                    <li><a href='#'>Privacy</a></li>
-                    <li><a href='#'>Terms</a></li>
-                    <li><a href='#'>Help</a></li>
-                    <li><a href='#'>Devices</a></li>
+                    <li><Link to='/error'>Privacy</Link></li>
+                    <li><Link to='/error'>Terms</Link></li>
+                    <li><Link to='/error'>Help</Link></li>
+                    <li><Link to='/error'>Devices</Link></li>
                 </ul>
             </div>
         </div>

@@ -16,7 +16,6 @@ interface Movie {
   poster_path: string;
   vote_average: number;
   original_language: string;
-  adult: boolean;
   budget: number;
   overview: string;
   popularity: number;
@@ -56,7 +55,6 @@ const Movie: React.FC = () => {
           lang={movie.original_language}
           id={movie.id}
           imageUrl={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-          adult={movie.adult}
           budget={movie.budget}
           overview={movie.overview}
           popularity={movie.popularity}

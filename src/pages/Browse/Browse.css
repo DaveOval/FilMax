@@ -36,6 +36,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: scroll;
+    overflow-y: hidden;
     scroll-snap-align: x mandatory;
     scroll-behavior: smooth;
     scroll-padding: 20px;

@@ -81,6 +81,21 @@
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
+.movie__bugget{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.movieIcon{
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+.movie__popularity{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
 hr{
     width: 90%;
     margin: auto;

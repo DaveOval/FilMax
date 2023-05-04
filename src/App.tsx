@@ -13,11 +13,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="*" element={<  Home />} />
+        <Route path="/" element={<  Home />} />
         <Route path="/browser" element={<Main/>} />
         <Route path="/movie/:id" element={<Movie />} />
         <Route path="/tv/:id" element={<Movie />} />
-        <Route path="/error" element={<ErrorPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
 
       <Footer />
