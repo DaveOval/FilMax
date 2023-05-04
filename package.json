@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.2.0",
   "type": "module",
-  "homepage": "https://daveoval.github.io/FilMax/",
+  "homepage": "https://fil-max.vercel.app/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
